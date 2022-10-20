@@ -1,6 +1,6 @@
 # Jogo-Da-Velha
 <hr />
-Jogo Da Velha produzido durante o fim do modulo Javscript Dom
+Jogo Da Velha produzido durante o fim do modulo Javscript DOM
 da Onebitcode
 
 <hr/>
