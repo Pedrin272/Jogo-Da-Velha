@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="./grid-3x3.svg" />
+
+    <title>Jogo da Velha</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-dark">
+    <nav class="nav d-flex justify-content-center">
+      <h1 class="text-center">Jogo da Velha</h1>
+    </nav>
+    <section class="container">
+      <hr />
+      <br />
+      <div class="d-flex justify-content-center mb-5">
+        <label for="player1" class="p-3"> X </label>
+        <input
+          type="text"
+          id="player1"
+          placeholder="Jogador 1"
+          class="text-dark form-control-lg"
+        />
+        <br />
+        <label for="player2" class="p-3"> O </label>
+        <input
+          type="text"
+          class="text-dark form-control-lg"
+          id="player2"
+          placeholder="Jogador 2"
+        />
+        <br />
+        <button class="btn btn-lg btn-info ms-5" id="start">
+          Iniciar Jogo
+        </button>
+      </div>
+      <div class="d-block justify-content-between">
+        <h3 id="gameText">Vez de:<span id="turnPlayer"></span></h3>
+      </div>
+
+      <div class="container" id="gameBoard">
+        <span class="cursor-pointer" data-region="0.0"></span>
+        <span class="cursor-pointer" data-region="0.1"></span>
+        <span class="cursor-pointer" data-region="0.2"></span>
+        <span class="cursor-pointer" data-region="1.0"></span>
+        <span class="cursor-pointer" data-region="1.1"></span>
+        <span class="cursor-pointer" data-region="1.2"></span>
+        <span class="cursor-pointer" data-region="2.0"></span>
+        <span class="cursor-pointer" data-region="2.1"></span>
+        <span class="cursor-pointer" data-region="2.2"></span>
+      </div>
+
+      <div class="mt-5">
+        <h3>Placar</h3>
+        <div class="d-flex justify-content-between">
+          <h2 id="player-1-score"><span id="playerOneScore">0</span></h2>
+          <h2 id="player-2-score"><span id="playerTwoScore">0</span></h2>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-5">
+      <div class="d-flex justify-content-center">
+        <h5 class="text-center">
+          Desenvolvido por:
+          <a class="me-1" target="_blank" href="https://github.com/Pedrin272"
+            >@Pedrin272</a
+          >|  Contato:
+          <a
+            href="https://www.linkedin.com/in/pedro-temoteo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >/in/pedro-temoteo</a
+          >
+        </h5>
+      </div>
+    </footer>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDbkUao74E8cJ_gxx8-upCc5uFoR0W_DP4",
+        authDomain: "jogo-da-velha-pedrin272.firebaseapp.com",
+        projectId: "jogo-da-velha-pedrin272",
+        storageBucket: "jogo-da-velha-pedrin272.appspot.com",
+        messagingSenderId: "1089025322558",
+        appId: "1:1089025322558:web:14fcff17e14f5939352b6f",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
