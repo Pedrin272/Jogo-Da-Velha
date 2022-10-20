@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "jogo-da-velha-pedrin272",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
